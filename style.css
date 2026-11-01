@@ -1,0 +1,10 @@
+:root { --view-height: 100dvh; color-scheme: dark; }
+* { box-sizing: border-box; }
+html,body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #202b21; color: #fff0d4; font-family: system-ui,sans-serif; overscroll-behavior: none; }
+#viewport { position: fixed; inset: 0; height: var(--view-height,100vh); padding: env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px); display: flex; justify-content: center; }
+#game { width: 100%; height: 100%; max-width: calc(var(--view-height,100vh) * 0.5625); min-height: 0; }
+#unity-canvas { width: 100%; height: 100%; display: block; border: 0; outline: 0; touch-action: none; }
+#startup { position: fixed; inset: 0; display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; padding: 24px; background: #202b21; text-align: center; }
+#startup[hidden] { display: none; }
+#startup img { border-radius: 18px; }
+#startup button { min-height: 48px; padding: 10px 24px; border: 1px solid #c79a5c; border-radius: 6px; background: #493023; color: #fff0d4; font: inherit; }

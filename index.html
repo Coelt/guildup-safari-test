@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#202b21">
+  <title>GuildUp</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="viewport"><div id="game"><canvas id="unity-canvas" tabindex="0" aria-label="GuildUp Spiel"></canvas></div></main>
+  <div id="startup" role="status"><img src="favicon.png" alt="" width="80" height="80"><p>GuildUp startet …</p></div>
+  <script src="storage.js"></script>
+  <script>
+    const canvas = document.querySelector('#unity-canvas');
+    const startup = document.querySelector('#startup');
+    function fitViewport() {
+      document.documentElement.style.setProperty('--view-height', Math.round(window.visualViewport ? visualViewport.height : innerHeight) + 'px');
+    }
+    fitViewport();
+    window.addEventListener('resize', fitViewport);
+    if (window.visualViewport) visualViewport.addEventListener('resize', fitViewport);
+    function loadError(message) {
+      startup.replaceChildren();
+      const text = document.createElement('p'); text.textContent = 'GuildUp konnte nicht gestartet werden. ' + message;
+      const retry = document.createElement('button'); retry.textContent = 'Neu laden'; retry.onclick = () => location.reload();
+      startup.append(text, retry); startup.hidden = false;
+    }
+    const script = document.createElement('script');
+    script.src = 'Build/Web.loader.js';
+    script.onerror = () => loadError('Die Spieldateien sind nicht erreichbar.');
+    script.onload = () => createUnityInstance(canvas, {
+      dataUrl: 'Build/Web.data.unityweb',
+      frameworkUrl: 'Build/Web.framework.js.unityweb',
+      codeUrl: 'Build/Web.wasm.unityweb',
+      streamingAssetsUrl: 'StreamingAssets', companyName: 'GuildUp', productName: 'GuildUp', productVersion: '0.1.0',
+      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
+      matchWebGLToCanvasSize: true,
+      autoSyncPersistentDataPath: false,
+      showBanner: (message, type) => { if (type === 'error') loadError(message); else console.warn(message); }
+    }).then(instance => { window.guildUpInstance = instance; startup.hidden = true; canvas.focus(); }).catch(error => loadError(String(error)));
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
