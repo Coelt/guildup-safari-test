@@ -1,57 +1,57 @@
 {
-    "format":  "GuildUpWebPackage1",
-    "unityVersion":  "6000.5.0f1",
-    "saveVersion":  4,
-    "status":  "prepared_local_only",
-    "files":  [
-                  {
-                      "path":  "index.html",
-                      "bytes":  2408,
-                      "sha256":  "d513851fe9d9c7c8b6b0f7843f0d57dd74c60c509277fb4981aba8f0535a6b8c"
-                  },
-                  {
-                      "path":  "style.css",
-                      "bytes":  1130,
-                      "sha256":  "37070c482c4fde16f7ac44d3985079675897c8fed8b073eb7e42e45fdb504377"
-                  },
-                  {
-                      "path":  "storage.js",
-                      "bytes":  3263,
-                      "sha256":  "d8512ffc44017ee82e56f17c613d42e1707c3ded0bc1bf721048ec35e202917c"
-                  },
-                  {
-                      "path":  "favicon.png",
-                      "bytes":  19510,
-                      "sha256":  "8234bc2f2b31bc9cc7e56e666b88caffe349668fdc9761fa3435ca77fe023145"
-                  },
-                  {
-                      "path":  "Build/Web.loader.js",
-                      "bytes":  47866,
-                      "sha256":  "d683ae7bd4498c99fe01507788d678676843a93f01f7fe5557709315d9946b74"
-                  },
-                  {
-                      "path":  "Build/Web.framework.js.unityweb",
-                      "bytes":  81125,
-                      "sha256":  "0ae24a05c2b91a8c0d2a73e3853459ce5d7fbe3e08a1fac90aa8090002c6c13d"
-                  },
-                  {
-                      "path":  "Build/Web.wasm.unityweb",
-                      "bytes":  7471755,
-                      "sha256":  "cf3e90861bc5a72ab68565f1b6ccf5f8e3f6eb57be7b1646a78a5686377326b4"
-                  },
-                  {
-                      "path":  "Build/Web.data.unityweb",
-                      "bytes":  18852443,
-                      "sha256":  "cb0e5fb06111f81f76287db377b6168572f194a7e4bc2d343e4f7c59be461a2d"
-                  },
-                  {
-                      "path":  ".nojekyll",
-                      "bytes":  0,
-                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-                  }
-              ],
-    "totalRuntimeBytes":  26479500,
-    "containsProjectSources":  false,
-    "containsPersonalSaves":  false,
-    "externalDeploymentPerformed":  false
+  "format": "GuildUpWebPackage1",
+  "unityVersion": "6000.5.0f1",
+  "saveVersion": 5,
+  "status": "prepared_local_only",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 2408,
+      "sha256": "d513851fe9d9c7c8b6b0f7843f0d57dd74c60c509277fb4981aba8f0535a6b8c"
+    },
+    {
+      "path": "style.css",
+      "bytes": 1130,
+      "sha256": "37070c482c4fde16f7ac44d3985079675897c8fed8b073eb7e42e45fdb504377"
+    },
+    {
+      "path": "storage.js",
+      "bytes": 3867,
+      "sha256": "9653eb1c6acb4438a6f11d34d7550c38f4daedb4d1ad87461d46fe95eba9f8ff"
+    },
+    {
+      "path": "favicon.png",
+      "bytes": 19510,
+      "sha256": "8234bc2f2b31bc9cc7e56e666b88caffe349668fdc9761fa3435ca77fe023145"
+    },
+    {
+      "path": "Build/Web.loader.js",
+      "bytes": 47866,
+      "sha256": "3160eb91e42ec8f906df6b7ec13bb8863d0b4fdaab33e1ba0f629519f08720a4"
+    },
+    {
+      "path": "Build/Web.framework.js.unityweb",
+      "bytes": 81241,
+      "sha256": "e0019698c6271601a9b209386337899f0a9d9851062f5fb37cebfee540fa2083"
+    },
+    {
+      "path": "Build/Web.wasm.unityweb",
+      "bytes": 7488868,
+      "sha256": "89710a615b5ab27e9affb4d8db240ac65ebe5719e02c6911340fb91812cde873"
+    },
+    {
+      "path": "Build/Web.data.unityweb",
+      "bytes": 18862529,
+      "sha256": "6dc449ca86911f615cb728dd15b33551a198e8c36b699acbeb4ec477fddd02b5"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "totalRuntimeBytes": 26507419.0,
+  "containsProjectSources": false,
+  "containsPersonalSaves": false,
+  "externalDeploymentPerformed": false
 }
